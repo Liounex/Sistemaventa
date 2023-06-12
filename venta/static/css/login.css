@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Importa la fuente de letra Roboto */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #22303e;
+    /* Color de fondo similar al menú */
+    font-family: 'Roboto', sans-serif;
+    /* Aplica la fuente de letra Roboto */
+}
+
+.login-header {
+    position: relative;
+    height: 70px;
+    /* Ajusta la altura del encabezado según tus necesidades */
+    background-color: #333;
+    /* Color de fondo del encabezado */
+    color: #fff;
+    text-align: center;
+}
+
+.login-header img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
+    /* Mantiene la proporción de aspecto */
+    margin-top: 30px;
+    border-radius: 100%;
+    /* Agrega el margen superior deseado */
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #555;
+}

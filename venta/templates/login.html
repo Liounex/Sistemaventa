@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <script src="{% static 'js/script.js' %}"></script>
+  <title>Iniciar sesión</title>
+</head>
+
+<body>
+  <div class="login-header">
+    <img src="{% static 'images/ventas.jpg' %}" alt="Logo" />
+    <!-- Agrega la ruta a tu logo y ajusta el atributo 'alt' -->
+  </div>
+  <div class="login-form">
+    <h2>Iniciar sesión</h2>
+    <form method="post" action="{% url 'home' %}">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="Nombre de usuario" required>
+      <br>
+      <input type="password" name="password" placeholder="Contraseña" required>
+      <br>
+      <input type="submit" value="Iniciar sesión">
+    </form>
+  </div>
+</body>
+
+</html>

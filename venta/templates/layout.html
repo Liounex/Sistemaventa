@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.all.min.js"></script>
+
+  <script src="{% static 'js/script.js' %}"></script>
+  <title>Sistema Ventas</title>
+</head>
+
+<body>
+  <div class="menu">
+    <ul>
+      <li><a href="{% url 'home' %}">Inicio</a></li>
+      <li><a href="{% url 'clientes' %}">Clientes</a></li>
+      <li><a href="{% url 'productos' %}">Productos</a></li>
+      <li><a href="{% url 'ventas' %}">Ventas</a></li>
+      <li><a href="{% url 'seguimiento' %}">Seguimento</a></li>
+      <li><a href="{% url 'reporte' %}">Reporte</a></li>
+      <!-- Agrega más elementos de menú para otras páginas -->
+    </ul>
+    <img src="{% static 'images/ventas.jpg' %}" alt="Logo" />
+    <!-- Agrega la ruta a tu logo y ajusta el atributo 'alt' -->
+  </div>
+  <div class="contenido">
+    {% block contenido %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>
